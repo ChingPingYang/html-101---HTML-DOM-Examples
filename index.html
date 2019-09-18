@@ -8,123 +8,32 @@
     <meta name="description" content="assignment">
     <meta name="generator" content="Myself">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML DOM</title>
+    <title>Sorting</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
-<body onload="absoluteBaseURI(), documentCookie(), documentType(), documentMode(),relativeURI(), implementation(),
-              encoding(), strickError(), title(), scripts()">
+<body>
 
-    <h1></h1>
-    <h1></h1>
-    <h1></h1>
+    <div class="left">
+        <h2>Unsorted Array</h1>
+        <form>
+            <textarea name="textarea" id="left-textarea" cols="80" rows="30"></textarea>
+        </form>
+    </div><div class="right">
+        <h2>Sorted Array</h1>
+        <form>
+            <textarea name="textarea" id="right-textarea" cols="80" rows="30"></textarea>
+        </form>
+    </div>
 
-    <h2></h2>
-    <h2></h2>
-    <h2></h2>
-
-    <h3></h3>
-    <h3></h3>
-    <h3></h3>
-
-    <p></p>
-    
-    <button></button>
-
-    <input type="text">
-
-    <script>
-
-        function changeColor(name){
-            for(let i = 0; i < name.length; i++){
-                name[i].style.color = "red";
-            }
-        }
-        
-        let h1s = document.getElementsByTagName("h1");
-        h1s[0].innerHTML = "H1-A";
-        h1s[1].innerHTML = "H1-B"
-        h1s[2].innerHTML = "H1-C"
-        changeColor(h1s);
-
-        let h2s = document.getElementsByTagName("h2");
-        h2s[0].innerHTML = "H2-A";
-        h2s[1].innerHTML = "H2-B";
-        h2s[2].innerHTML = "H2-C";
-        changeColor(h2s);
-
-        let h3s = document.getElementsByTagName("h3");
-        h3s[0].innerHTML = "H3-A";
-        h3s[1].innerHTML = "H3-B";
-        h3s[2].innerHTML = "H3-C";
-        changeColor(h3s);
-        
-        let p = document.getElementsByTagName("p");
-        p[0].style.color = "blue";
-        p[0].innerHTML = "This is paragraph - 1";
-        
-
-        let buttons = document.getElementsByTagName("button");
-        buttons[0].style.width = "100px";
-        buttons[0].style.height = "50px";
-        buttons[0].style.display = "block";
-        buttons[0].innerHTML = "Btn1";
-        //way 1
-        buttons[0].onmouseenter = invisible;
-        buttons[0].onmouseout = show;
-        //way 2
-        buttons[0].addEventListener("mouseover", invisible);
-        buttons[0].addEventListener("mouseout", show);
-        
-        function invisible(){
-            buttons[0].style.visibility = "hidden";
-        }
-        function show(){
-            buttons[0].style.visibility = "visible";
-        }
-
-        let inputs = document.getElementsByTagName("input");
-        inputs[0].style.display = "block";
-        inputs[0].setAttribute("value", "input-1");
-        
+    <div class="bot">
+        <button id="btn1">Create An Array</button>
+        <button id="btn2">Sort The Array</button>
+    </div>
 
 
-
-        function absoluteBaseURI(){
-            h1s[0].innerHTML = document.baseURI;
-        }
-        function documentCookie(){
-            h1s[1].innerHTML = document.cookie.length;
-        }
-        function documentType(){
-            h1s[2].innerHTML = document.doctype.name;
-        }
-        function documentMode(){
-            h2s[0].innerHTML = document.documentMode;
-        }
-        function relativeURI(){
-            h2s[1].innerHTML = document.documentURI;
-        }
-        function implementation(){
-            h2s[2].innerHTML = document.implementation;
-        }
-        function encoding(){
-            h3s[0].innerHTML = document.inputEncoding;
-        }
-        function strickError(){
-            h3s[1].innerHTML = document.strictErrorChecking;
-        }
-        function title(){
-            h3s[2].innerHTML = document.title;
-        }
-        function scripts(){
-            inputs[0].setAttribute("value", document.scripts);
-        }
-
-        
-        
-      
+   
 
 
-    </script>
-    
+    <script src="./index.js"></script>
 </body>
 </html>

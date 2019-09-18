@@ -1,5 +1,5 @@
-# Practicing HTML DOM
-## School assignment
+# Bubble Sort
+## Javascript practice
 
 
 
