@@ -29,9 +29,9 @@
     
     <button></button>
 
-    <input type="text">
+    <textarea  cols="30" rows="10"></textarea>
 
-    <script>
+    <script id="myScript" spellcheck="false">
 
         function changeColor(name){
             for(let i = 0; i < name.length; i++){
@@ -72,8 +72,9 @@
         buttons[0].onmouseout = show;
         //way 2
         buttons[0].addEventListener("mouseover", invisible);
-        buttons[0].addEventListener("mouseout", show);
+        buttons[0].addEventListener("mouseout", function(e){show()});
         
+
         function invisible(){
             buttons[0].style.visibility = "hidden";
         }
@@ -81,9 +82,9 @@
             buttons[0].style.visibility = "visible";
         }
 
-        let inputs = document.getElementsByTagName("input");
-        inputs[0].style.display = "block";
-        inputs[0].setAttribute("value", "input-1");
+        let textArea = document.getElementsByTagName("textarea");
+        textArea[0].style.display = "block";
+        // textArea[0].innerHTML = document.scripts[0];
         
 
 
@@ -116,14 +117,10 @@
             h3s[2].innerHTML = document.title;
         }
         function scripts(){
-            inputs[0].setAttribute("value", document.scripts);
+            textArea[0].innerHTML = document.scripts.namedItem("myScript").text;
+            
+            
         }
-
-        
-        
-      
-
-
     </script>
     
 </body>
