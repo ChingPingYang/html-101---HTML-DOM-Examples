@@ -3,20 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="ChingPing_Yang">
-    <meta name="keywords" content="javascript, html dom, bubble sort">
-    <meta name="description" content="A web page for testing bubble sort">
+    <meta name="keywords" content="javascript, html dom">
+    <meta name="description" content="A web page for testing HTML DOM">
     <meta name="generator" content="My hands">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Assignment_1</title>
 </head>
-<body>
+<body onload="baseURI(), cookie(), doctype(), documentMode(), documentURI(), implementation(), inputEncoding(), error(),
+              title()">
     
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+
+    <h2></h2>
+    <h2></h2>
+    <h2></h2>
+
+    <h3></h3>
+    <h3></h3>
+    <h3></h3>
+
+    <button style="width: 100px; height: 50px; display: block;">click me</button>
+
+    <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+
+
+    <script id="myScript">
+    let h1A = document.getElementsByTagName("h1")[0];
+    let h1B = document.getElementsByTagName("h1")[1];
+    let h1C = document.getElementsByTagName("h1")[2];
+    for(let i = 0; i < document.getElementsByTagName("h1").length; i++){
+        document.getElementsByTagName("h1")[i].style.color = "red";
+    }
+    function baseURI(){
+        h1A.innerHTML = document.baseURI;
+    }
+    function cookie(){
+        h1B.innerHTML = document.cookie.length;
+    }
+    function doctype(){
+        h1C.innerHTML = document.doctype.name;
+    }
+
+
+    let h2A = document.getElementsByTagName("h2")[0];
+    let h2B = document.getElementsByTagName("h2")[1];
+    let h2C = document.getElementsByTagName("h2")[2];
+    for(let i = 0; i < document.getElementsByTagName("h2").length; i++){
+        document.getElementsByTagName("h2")[i].style.color = "blue";
+    }
+    function documentMode(){
+        h2A.innerHTML = document.documentMode;
+    }
+    function documentURI(){
+        h2B.innerHTML = document.documentURI;        
+    }
+    function implementation(){
+        h2C.innerHTML = document.implementation;
+    }
+
+    let h3A = document.getElementsByTagName("h3")[0];
+    let h3B = document.getElementsByTagName("h3")[1];
+    let h3C = document.getElementsByTagName("h3")[2];
+    for(let i = 0; i < document.getElementsByTagName("h3").length; i++){
+        document.getElementsByTagName("h3")[i].style.color = "green";
+    }
+    function inputEncoding(){
+        h3A.innerHTML = document.inputEncoding;
+    }
+    function error(){
+        h3B.innerHTML = document.strictErrorChecking;
+    }
+    function title(){
+        h3C.innerHTML = document.title;
+    }
     
-
-
-
-
+    let textarea = document.getElementsByTagName("textarea")[0];
+    textarea.innerHTML = document.scripts.namedItem("myScript").text;
+    
+    let button = document.getElementsByTagName("button")[0];
+    button.onmouseover = function(){button.style.visibility = "hidden"};
+    button.onmouseout = function(){button.style.visibility = "visible"};
+    
+    </script>
 </body>
 </html>
 
